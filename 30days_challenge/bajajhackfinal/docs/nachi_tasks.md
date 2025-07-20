@@ -6,7 +6,7 @@
 * **Service**: `🤖ai_services` (Python)
 * **Files Used**: `ai_services/llm_provider_framework.py`
 * **What to do**:
-    * Refine the existing `OpenRouterClient` class to test different models available through OpenRouter, such as `openai/o4-mini-high`.
+    * Refine the existing `OpenRouterClient` class to test different models available through OpenRouter, such as `moonshotai/kimi-k2:free`.
     * Enhance the `run_comprehensive_evaluation` method to accept a list of models to test against the same set of sample insurance documents and queries.
     * Log the performance metrics (accuracy, response time, token usage) for each model.
     * Update the `generate_decision_document` function to compare the tested models and recommend a primary and a backup option based on the results.

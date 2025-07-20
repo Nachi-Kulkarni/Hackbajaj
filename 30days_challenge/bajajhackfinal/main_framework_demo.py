@@ -242,7 +242,7 @@ def generate_final_report(prompt_results: Dict, llm_results: Dict) -> None:
             "Comprehensive evaluation framework"
         ],
         "validation_criteria_met": {
-            "ai_d1_001": "Successfully process insurance queries with o4-mini-high",
+            "ai_d1_001": "Successfully process insurance queries with kimi-k2:free",
             "ai_d1_002": f"Achieved {llm_results.get('evaluation_metrics', {}).get('overall_accuracy', 0):.1f}% accuracy (target: >80%)"
         }
     }
@@ -253,7 +253,7 @@ def generate_final_report(prompt_results: Dict, llm_results: Dict) -> None:
     
     logger.info("\nImplementation Summary:")
     logger.info(f"✓ Prompt Engineering Framework: {prompt_results['total_queries']} test queries generated")
-    logger.info(f"✓ LLM Provider Selection: o4-mini-high via OpenRouter")
+    logger.info(f"✓ LLM Provider Selection: kimi-k2:free via OpenRouter")
     
     if 'evaluation_metrics' in llm_results:
         accuracy = llm_results['evaluation_metrics']['overall_accuracy']

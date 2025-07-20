@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 LLM Provider Framework for Insurance Document Q&A
-Implements AI-D1-001 and AI-D1-002 tickets using o4-mini-high via OpenRouter
+Implements AI-D1-001 and AI-D1-002 tickets using kimi-k2:free via OpenRouter
 
 This framework provides:
-- OpenRouter API integration for o4-mini-high
+- OpenRouter API integration for kimi-k2:free
 - Insurance document Q&A processing
 - Structured JSON response handling
 - Performance evaluation and metrics
@@ -49,9 +49,9 @@ class EvaluationResult:
     error: Optional[str] = None
 
 class OpenRouterClient:
-    """OpenRouter API client for o4-mini-high model"""
+    """OpenRouter API client for kimi-k2:free model"""
     
-    def __init__(self, api_key: str, model: str = "openai/o4-mini-high"):
+    def __init__(self, api_key: str, model: str = "moonshotai/kimi-k2:free"):
         self.api_key = api_key
         self.model = model
         self.base_url = "https://openrouter.ai/api/v1/chat/completions"
@@ -126,7 +126,7 @@ class OpenRouterClient:
             )
 
 class InsuranceQAFramework:
-    """Main framework for insurance document Q&A using o4-mini-high"""
+    """Main framework for insurance document Q&A using kimi-k2:free"""
     
     def __init__(self, processed_documents_path: str = "processed_documents_mistral.json"):
         # Load environment variables
@@ -344,7 +344,7 @@ class InsuranceQAFramework:
         decision_document = {
             "decision_summary": {
                 "selected_provider": "OpenRouter",
-                "selected_model": "openai/o4-mini-high",
+                "selected_model": "moonshotai/kimi-k2:free",
                 "decision_date": datetime.now().isoformat(),
                 "overall_accuracy": metrics.get("overall_accuracy", 0),
                 "meets_criteria": metrics.get("meets_success_criteria", False),
@@ -353,7 +353,7 @@ class InsuranceQAFramework:
             "evaluation_metrics": metrics,
             "provider_details": {
                 "provider_name": "OpenRouter",
-                "model_name": "openai/o4-mini-high",
+                "model_name": "moonshotai/kimi-k2:free",
                 "api_endpoint": "https://openrouter.ai/api/v1/chat/completions",
                 "pricing_model": "Pay-per-token",
                 "strengths": [
