@@ -174,7 +174,7 @@ def demonstrate_llm_provider_selection() -> Dict[str, Any]:
         logger.info(f"\nRecommendation: {recommendation}")
         
         if metrics['failed_tests']:
-            logger.info(f"\nFailed Tests ({len(metrics['failed_tests'])}):"))
+            logger.info(f"\nFailed Tests ({len(metrics['failed_tests'])}):")
             for i, failed_test in enumerate(metrics['failed_tests'][:3], 1):
                 logger.info(f"  {i}. {failed_test['query_type']}: {failed_test['accuracy_score']:.2f}")
         

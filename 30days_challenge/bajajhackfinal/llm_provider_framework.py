@@ -51,7 +51,7 @@ class EvaluationResult:
 class OpenRouterClient:
     """OpenRouter API client for o4-mini-high model"""
     
-    def __init__(self, api_key: str, model: str = "openai/gpt-4o-mini"):
+    def __init__(self, api_key: str, model: str = "openai/o4-mini-high"):
         self.api_key = api_key
         self.model = model
         self.base_url = "https://openrouter.ai/api/v1/chat/completions"
@@ -344,7 +344,7 @@ class InsuranceQAFramework:
         decision_document = {
             "decision_summary": {
                 "selected_provider": "OpenRouter",
-                "selected_model": "openai/gpt-4o-mini",
+                "selected_model": "openai/o4-mini-high",
                 "decision_date": datetime.now().isoformat(),
                 "overall_accuracy": metrics.get("overall_accuracy", 0),
                 "meets_criteria": metrics.get("meets_success_criteria", False),
@@ -353,7 +353,7 @@ class InsuranceQAFramework:
             "evaluation_metrics": metrics,
             "provider_details": {
                 "provider_name": "OpenRouter",
-                "model_name": "openai/gpt-4o-mini",
+                "model_name": "openai/o4-mini-high",
                 "api_endpoint": "https://openrouter.ai/api/v1/chat/completions",
                 "pricing_model": "Pay-per-token",
                 "strengths": [

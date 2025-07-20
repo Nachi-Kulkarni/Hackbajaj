@@ -63,7 +63,7 @@
 - **Deliverable**: Working document upload/retrieve/delete API endpoints
 - **Validation Criteria**: Upload, store, and retrieve a test insurance document successfully
 - **Time**: 4 hours
-
+$
 
 #### **End of Day 1 Validation**
 
